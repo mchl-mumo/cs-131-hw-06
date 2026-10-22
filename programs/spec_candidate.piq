@@ -1,0 +1,28 @@
+define boxes(size, gap) {
+    square size
+    move right size + gap
+    square size
+}
+
+x = 20
+y = x * 2
+
+dot
+
+square x
+rectangle 30 10
+circle x / 2
+
+move right 15
+move up 1
+move down x + 5
+
+line left 10
+line right 1
+
+for i from 1 to 5 {
+    square i * 5
+    move right 10
+}
+
+boxes(20, 5)

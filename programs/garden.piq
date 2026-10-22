@@ -1,0 +1,31 @@
+define petals(r) {
+    circle r / 2
+    move up r      circle r / 2    move down r
+    move down r    circle r / 2    move up r
+    move left r    circle r / 2    move right r
+    move right r   circle r / 2    move left r
+}
+
+define flower(height, r) {
+    line up height
+    petals(r)
+    dot
+    move down height
+}
+
+ground = 60
+move down ground
+move left 160
+line right 320
+
+move left 290
+for i from 1 to 6 {
+    flower(30 + i * 8, 4 + i)
+    move right 50
+}
+
+move left 290
+move up ground + 90
+for ring from 1 to 3 {
+    circle ring * 8
+}

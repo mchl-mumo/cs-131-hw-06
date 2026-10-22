@@ -1,0 +1,15 @@
+define target(r) {
+    for k from 1 to 3 {
+        circle k * r / 3
+    }
+    dot
+}
+
+move left 60
+for i from 1 to 3 {
+    target(10 + i * 5)
+    move right 60
+}
+move left 180
+move down 40
+line right 120
